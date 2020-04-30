@@ -27,7 +27,7 @@ from sqlite3 import Error
 
 
 #load job data in dataframe and vector 
-data = pd.read_csv('../job_process.csv')
+data = pd.read_csv('job_process.csv')
 
 #vector
 path_file = os.path.join('..','vector.pkl')
