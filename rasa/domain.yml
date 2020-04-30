@@ -1,0 +1,99 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- inform
+- user_background
+- thanks
+- user_description
+- user_expertize
+- out_of_scope
+- rate
+entities:
+- location
+- job_title
+- name
+- age
+- mail
+slots:
+  age:
+    type: unfeaturized
+  job_title:
+    type: unfeaturized
+  location:
+    type: unfeaturized
+  mail:
+    type: unfeaturized
+  name:
+    type: unfeaturized
+  verdict:
+    type: categorical
+    values:
+    - continue
+    - ok
+    - almost
+    - not ok
+responses:
+  utter_greet:
+  - text: Hey!
+  - text: Hello!
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_botdescription:
+  - text: I am jobfinder for mybusiness company. If you are interested in joining
+      us, I can help you find the job offer that best suits you according to your
+      preferences and skills. Would you like to start?
+  - text: I am jobfinder. I will help you find the most suitable job offer from available
+      positions in mybusiness company. Are you ready?
+  utter_userdescription:
+  - text: Kindly,tell me a little about yourself
+  - text: Please, briefly describe yourself
+  utter_background:
+  - text: Walk Me Through Your Resume.
+  - text: Tell me about your professional background.
+  utter_expertize:
+  - text: What skills have you gained from your work experience and education?
+  - text: What are your expertise and qualifications?
+  utter_ask_name:
+  - text: Let's get started! What's your name?
+  - text: Great! What's your name?
+  utter_ask_mail:
+  - text: What is your e-mail address?
+  utter_ask_rephrase:
+  - text: I am so sorry I do not understand your point. Could you say it again?
+  - text: I didn't get that. Could you rephrase please?
+  - text: I am so sorry I do not understand your point.Please be more specific!
+  - text: Can you say that a different way?
+  - text: I am jobfinder. I can help you find the most suitable job offer from available
+      positions in mybusiness company. Would you like to start?
+actions:
+- utter_greet
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_botdescription
+- utter_userdescription
+- utter_background
+- utter_expertize
+
+- utter_ask_name
+- utter_ask_mail
+- action_test
+- action_next
+- action_register_name
+- action_register_mail
+- utter_ask_rephrase

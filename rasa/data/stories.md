@@ -1,0 +1,420 @@
+## good_01
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"continue"}
+* user_expertize
+  - action_test
+  - slot{"verdict":"ok"}
+* thanks
+  - utter_goodbye
+
+## good_01_
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_background
+  - action_test
+  - slot{"verdict":"continue"}
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_expertize
+  - action_test
+  - slot{"verdict":"ok"}
+* thanks
+  - utter_goodbye
+
+## good_01_A
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"continue"}
+* user_expertize
+  - action_test
+  - slot{"verdict":"almost"}
+* rate
+  - action_next
+* thanks
+  - utter_goodbye
+
+## good_01_A_
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_background
+  - action_test
+  - slot{"verdict":"continue"}
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_expertize
+  - action_test
+  - slot{"verdict":"almost"}
+* rate
+  - action_next
+* thanks
+  - utter_goodbye
+
+## good_01_B
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"continue"}
+* user_expertize
+  - action_test
+  - slot{"verdict":"not ok"}
+* affirm
+  - utter_goodbye
+
+## good_01_B_1
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"continue"}
+* user_expertize
+  - action_test
+  - slot{"verdict":"not ok"}
+* thanks
+  - utter_goodbye
+
+## good_01_B_2
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"continue"}
+* user_expertize
+  - action_test
+  - slot{"verdict":"not ok"}
+* deny
+  - utter_goodbye
+
+## good_01_B_3
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"continue"}
+* user_expertize
+  - action_test
+  - slot{"verdict":"not ok"}
+* goodbye
+  - utter_goodbye
+
+## good_02
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"ok"}
+* thanks
+  - utter_goodbye
+
+## good_02_A
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"almost"}
+* rate
+  - action_next
+* thanks
+  - utter_goodbye
+
+## good_02_B
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"not ok"}
+* thanks
+  - utter_goodbye
+
+## good_02_B_1
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"not ok"}
+* goodbye
+  - utter_goodbye
+
+## good_02_B_2
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"continue"}
+* user_background
+  - action_test
+  - slot{"verdict":"not ok"}
+* affirm
+  - utter_goodbye
+
+## good_start03
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"ok"}
+* goodbye
+  - utter_goodbye
+
+## good_start03_A
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"almost"}
+* rate
+  - action_next
+* goodbye
+  - utter_goodbye
+
+## good_start03_B
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"not ok"}
+* goodbye
+  - utter_goodbye
+
+## good_start03_B_1
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"not ok"}
+* thanks
+  - utter_goodbye
+
+## good_start03_B_2
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"not ok"}
+* goodbye
+  - utter_goodbye
+
+## good_start03_B_3
+* greet
+  - utter_greet
+  - utter_botdescription
+* affirm
+  - utter_ask_name
+* inform
+  - action_register_name
+  - utter_ask_mail
+* inform
+  - action_register_mail
+  - utter_userdescription
+* user_description
+  - action_test
+  - slot{"verdict":"not ok"}
+* affirm
+  - utter_goodbye
+
+## bad_01
+* greet
+  - utter_greet
+  - utter_botdescription
+* deny
+  - utter_goodbye
+
