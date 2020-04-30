@@ -30,11 +30,11 @@ from sqlite3 import Error
 data = pd.read_csv('job_process.csv')
 
 #vector
-path_file = os.path.join('..','vector.pkl')
+path_file = os.path.join('.','vector.pkl')
 with open(path_file,'rb') as f:
     vector = pickle.load(f)
 #vectorizer  
-path_file = os.path.join('..','vectorizer.pkl')
+path_file = os.path.join('.','vectorizer.pkl')
 with open(path_file,'rb') as f:
     tfidf = pickle.load(f)
     
