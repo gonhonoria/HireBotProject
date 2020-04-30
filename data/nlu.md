@@ -117,14 +117,6 @@
 - I worked at a small shop for two years doing 50 projects a year, meeting 100% of my deadlines. Then I worked for a bigger firm with clients like Disney and Netflix—with 99% client satisfaction. I collaborated with the team to win an A’ Design Award. I’m excited to step into a role like this that’s designed around that kind of efficiency and collaboration
 - I have worked as microwave engineer for huawei. prepare the radio frequency and make recommendations;- Make current \ntraffic and traffic increase analysis;also Conduct planned network \ncoverage analysis;  i Register the complaints and follow up;- Organize \nradio frequency usage licenses acquisition; Prepare and register the \nRadiation project according to sanitary norms and standards of RA
 
-## intent:search_job_general
-- Which positions are available?
-- What job offers do you have?
-- What do you offer?
-- I am looking for a job
-- I need a job
-- which job do you have?
-
 ## intent:deny
 - no
 - never
@@ -143,6 +135,19 @@
 - 3
 - 4
 - 5
+
+## intent:out_of_scope
+- i don't know
+- tell me
+- same as you
+- i am hungry
+- i am looking for a job
+- why
+- what
+- so what
+- guess
+- bla bla 
+
 
 ## intent:mood_great
 - perfect

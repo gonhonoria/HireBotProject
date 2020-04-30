@@ -17,7 +17,6 @@ intents:
 - out_of_scope
 - rate
 entities:
-- location
 - job_title
 - name
 - age
@@ -26,8 +25,6 @@ slots:
   age:
     type: unfeaturized
   job_title:
-    type: unfeaturized
-  location:
     type: unfeaturized
   mail:
     type: unfeaturized
@@ -89,7 +86,6 @@ actions:
 - utter_userdescription
 - utter_background
 - utter_expertize
-
 - utter_ask_name
 - utter_ask_mail
 - action_test
