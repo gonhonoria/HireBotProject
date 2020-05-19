@@ -27,14 +27,12 @@ from sqlite3 import Error
 
 
 #load job data in dataframe and vector 
-data = pd.read_csv('job_process.csv')
-
-#vector
-path_file = os.path.join('.','vector.pkl')
+data = pd.read_csv('../job_process.csv')
+path_file = os.path.join('..','vector.pkl')
 with open(path_file,'rb') as f:
     vector = pickle.load(f)
-#vectorizer  
-path_file = os.path.join('.','vectorizer.pkl')
+  
+path_file = os.path.join('..','vectorizer.pkl')
 with open(path_file,'rb') as f:
     tfidf = pickle.load(f)
     
@@ -48,7 +46,7 @@ cur.execute("""CREATE TABLE IF NOT EXISTS info (
                                     questions_count integer,
                                     sim_score real,
                                     sim_id integer ,
-                                    name  text,
+                                    name text,
                                     age text,
                                     title text,
                                     mail text
@@ -73,7 +71,7 @@ def get_closest_job(query, tf_idf, vectorizer):
     return (close_ind[0],simi[close_ind[0]]) 
  
 class ActionRegistername(Action):
-    #to save user name
+
     def name(self) -> Text:
         return "action_register_name"
     
@@ -104,7 +102,6 @@ class ActionRegistername(Action):
         return []
 class ActionRegistermail(Action):
 
-    #to save user mail address
     def name(self) -> Text:
         return "action_register_mail"
     
@@ -133,11 +130,25 @@ class ActionRegistermail(Action):
         conn.commit()
         conn.close()
         return []
- 
-class ActionTest(Action):
+
+class ActionInfo(Action):
 
     def name(self) -> Text:
-        return "action_test"
+        return "action_job_details"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+         tracker: Tracker,
+         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        #Connect to dataframe
+        job_list = list(data['Title'].unique())
+        dispatcher.utter_message(f"Here, our current opportunities:\n {'-'.join(job_list)}")
+        dispatcher.utter_message("Are you interested in one of those positions?")
+        return []
+ 
+class ActionMain(Action):
+
+    def name(self) -> Text:
+        return "action_interview"
     
     def run(self, dispatcher: CollectingDispatcher,
          tracker: Tracker,
@@ -170,11 +181,9 @@ class ActionTest(Action):
             query = """UPDATE info SET interview = ? , questions_count = ?, sim_score = ?, sim_id = ? where id = ?;"""
             cur.execute(query,(user_input, n, score, int(sim_ind), user_id))
         verdict = 'continue'
-        # add for additional question to user
-        add = (data['Software'].iloc[int(sim_ind)])
-        #add = (data['Software'].iloc[int(sim_ind)]) + (data['Language'].iloc[int(sim_ind)])
-        l = len(add)
-        
+        # Build competencies list. The dataframe cell is a string
+        add = (data['Software'][int(sim_ind)].strip('],[')).split(',') + (data['Language'][int(sim_ind)].strip('],[')).split(',')
+        print(add)
         #check score
         if score < 0.35:
             if n == 1:
@@ -187,42 +196,37 @@ class ActionTest(Action):
                verdict = 'not ok'
                dispatcher.utter_message(f"{id} Sorry:{score}")
                dispatcher.utter_message(f"{result[5]}, we presently have no offer matching your profile. Once, we get an offer that matches your profile, we will contact you by e-mail")
-        elif score < 0.5 and l == 0: # score > 0.35 but no additional question
+        elif score < 0.5 and l == 0:
                verdict = 'not ok'
                dispatcher.utter_message(f"{id} Sorry:{score}")
                dispatcher.utter_message(f"{result[5]}, we presently have no offer matching your profile. Once, we get an offer that matches your profile, we will contact you by e-mail")
-        elif score < 0.5 and l != 0: # score > 0.35 with additional question
+        elif score < 0.5 and l != 0:
                verdict = 'almost'
-               c = random.randint(0,l-1)
+               c = random.randint(0,l-1) #choose a random skill
+               dispatcher.utter_message(f"{id} Sorry:{score}")
                dispatcher.utter_message(f"How would you rate your {add[c]} skill on a scale of 1(beginner) to 5(expert)?")
-                #dispatcher.utter_message(f"we may have found a good match:{sim_ind,score}")
-                #dispatcher.utter_message(f"{result[5]}! your profile is very interesting! The HR team may further contact you for more details")
-                #start an other action..ask competences and language?
-        elif score > 0.5 and l == 0: # score > 0.5 with additional question
-               verdict = 'ok'
-               dispatcher.utter_message(f"{result[5]}! your profile is very interesting! The HR team may further contact you for more details")
+               #start an other action..
         else:
                verdict = 'almost'
                c = random.randint(0,l-1)
+               dispatcher.utter_message(f"{id} Sorry:{score}")
                dispatcher.utter_message(f"How would you rate your {add[c]} skill on a scale of 1(beginner) to 5(expert)?")
-                #dispatcher.utter_message(f"Congratulations {result[5]}! We have one offer of {data['Title']} that pretty match your profile:{sim_ind,score}")
-                #dispatcher.utter_message(f"{data['AboutC']} before {data['Deadline']}")
+	       #start an other action..
         conn.commit()
         conn.close()
         return [SlotSet('verdict',verdict)]
 
-class ActionNest(Action):
+class ActionBonus(Action):
 
-    #collect additional question answer and give the final feedback
     def name(self) -> Text:
-        return "action_next"
+        return "action_bonus"
     
     def run(self, dispatcher: CollectingDispatcher,
          tracker: Tracker,
          domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:        
         #Connect to database
         try:
-           conn = sqlite3.connect('candidates.db')
+           conn = sqlite3.connect('candidates_2.db')
            cur = conn.cursor()
         except Error as e:
            print(e) 
@@ -232,11 +236,12 @@ class ActionNest(Action):
         result = cur.fetchone()       
         if result != None:
            if rate > 3:
-              dispatcher.utter_message(f"Congratulations {result[5]}! We have one offer of {data['Title'].iloc[result[4]]} that pretty match your profile")
-              dispatcher.utter_message(f"{data['AboutC'].iloc[result[4]]} before {data['Deadline'].iloc[result[4]]}")
+              dispatcher.utter_message(f"Congratulations {result[5]}! We have one offer of {data['Title'].iloc[result[4]]} that pretty match your profile. Find below the application details" )
+              dispatcher.utter_message(f"{data['ApplicationP'].iloc[result[4]]} before {data['Deadline'].iloc[result[4]]}")
            else:
-             dispatcher.utter_message(f"{result[5]}! your profile is very interesting! The HR team may further contact you for more details")
+             dispatcher.utter_message(f"{result[5]}! you have a good background and your profile may be of interest. HR team may contact you after reviewing")
         conn.commit()
         conn.close()
         return []
-      
+    
+

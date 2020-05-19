@@ -9,14 +9,17 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
+- search_job_general
+- search_job
 - inform
-- user_background
+- user_profile
 - thanks
-- user_description
-- user_expertize
 - out_of_scope
 - rate
+- affirm_search_job_general
+- affirm_search_job_questions
 entities:
+- location
 - job_title
 - name
 - age
@@ -25,6 +28,8 @@ slots:
   age:
     type: unfeaturized
   job_title:
+    type: unfeaturized
+  location:
     type: unfeaturized
   mail:
     type: unfeaturized
@@ -64,11 +69,17 @@ responses:
   utter_expertize:
   - text: What skills have you gained from your work experience and education?
   - text: What are your expertise and qualifications?
+  utter_ask_location:
+  - text: Do you have any location preference?
+  - text: Are you interested in a specific location?
+  - text: Do You Have a Geographic Preference?
   utter_ask_name:
   - text: Let's get started! What's your name?
   - text: Great! What's your name?
+  - text: Please,give me your name!
   utter_ask_mail:
   - text: What is your e-mail address?
+  - text: Please, provide me your e-mail address!
   utter_ask_rephrase:
   - text: I am so sorry I do not understand your point. Could you say it again?
   - text: I didn't get that. Could you rephrase please?
@@ -86,10 +97,12 @@ actions:
 - utter_userdescription
 - utter_background
 - utter_expertize
+- utter_ask_location
 - utter_ask_name
 - utter_ask_mail
-- action_test
-- action_next
+- action_interview
+- action_bonus
 - action_register_name
 - action_register_mail
 - utter_ask_rephrase
+- action_job_details
