@@ -9,6 +9,7 @@
 - Hi buddy
 - Hi bot
 - Hola
+- heloo
 
 ## intent:thanks
 - thanks
@@ -21,6 +22,8 @@
 - Appreciate
 - great
 - good
+- much thanks
+- gracias
 
 ## intent:goodbye
 - bye
@@ -32,6 +35,8 @@
 - Bye Bye
 - gdbye
 - next
+- see you
+- bye bye
 
 ## intent:affirm
 - yes
@@ -46,6 +51,7 @@
 - that sounds good
 - correct
 - great
+- well
 
 ## intent:inform
 - My name is [Adele Oku](name)
@@ -74,7 +80,7 @@
 - [example@true.org](mail)
 - [apple@false.org](mail)
 
-## intent:user_description
+## intent:user_profile
 - I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive toward. I’m not comfortable with settling, and I’m always looking for an opportunity to do better and achieve greatness. In my previous role, I was promoted three times in less than two years.
 - Well, I’m currently an [account executive](job_title) at Smith, where I handle our top performing client. Before that, I worked at an agency where I was on three different major national healthcare brands. And while I really enjoyed the work that I did, I’d love the chance to dig in much deeper with one specific healthcare company, which is why I’m so excited about this opportunity with Metro Health Center
 - I am highly organized. I always take notes, and I use a series of tools to help myself stay on top of deadlines. I like to keep a clean workspace and create a logical filing method so I’m always able to find what I need. I find this increases efficiency and helps the rest of the team stay on track, too. In my last role, I created a new filing process that increased departmental efficiency 25%.
@@ -90,8 +96,6 @@
 - I've been an tech-focused [project manager](job_title) for up to 8 years now.I graduated from University X, where I made the Dean’s List, with a major in business administration and a minor in computer science. After that, I first got into the industry working as an administrative assistant at Company X. There I provided clerical support with interdepartmental communication, helped in managing schedules, and maintained the digital filing system.After that, I was working as a project manager for Company Y that provided cloud computing solutions for about 6 years. There, I personally managed 5+ teams of software projects, and made sure everything went smoothly in terms of business goals, deadlines, budget, and more
 - I recently graduated from University X with a B.A. in international business. While there, I learned a lot of theory in subjects like corporate communication, international economics, corporate governance, and more. I was also part of the student government, and maintained a GPA of 3.6.I’ve worked hard in my education and now I’m ready to apply my knowledge into practice. I’m currently working as a [marketing coordinator](job_title) at a fashion e-commerce startup.
 - I am a network radio performance assistant at Orange sonatel. I am really organised, self critic and self learn
-
-## intent:user_background
 - I’m an avid movie buff, which is why I attended film school at UCLA. I love everything about working as a [production assistant](job_title), knowing that I’m playing my part in creating films that will bring people joy. While I’m content to be where I am now, I do dream of one day becoming a location scout.
 - ​I started my career in [Marketing](job_title) after graduating with a Business degree in 2013. I’ve spent my entire career at Microsoft, receiving two promotions and three awards for outstanding performance. I’m looking to join a smaller company now, and take on more leadership and project management.
 - I graduated with a Business degree in 2010, and was offered an [account management](job_title) position from a telecommunications company I had interned with. I loved working with customers and managing and growing my accounts, but the industry we were in just wasn’t very appealing to me. After that, I stayed a full year and learned a ton about how to build and manage accounts successfully and  I ended up becoming a top performer in my group before leaving.
@@ -117,6 +121,34 @@
 - I worked at a small shop for two years doing 50 projects a year, meeting 100% of my deadlines. Then I worked for a bigger firm with clients like Disney and Netflix—with 99% client satisfaction. I collaborated with the team to win an A’ Design Award. I’m excited to step into a role like this that’s designed around that kind of efficiency and collaboration
 - I have worked as microwave engineer for huawei. prepare the radio frequency and make recommendations;- Make current \ntraffic and traffic increase analysis;also Conduct planned network \ncoverage analysis;  i Register the complaints and follow up;- Organize \nradio frequency usage licenses acquisition; Prepare and register the \nRadiation project according to sanitary norms and standards of RA
 
+## intent:affirm_search_job_questions
+- Yes, Which positions are available?
+- Sure, What job offers do you have?
+- ok, What do you offer?
+- of course, which job do you have?
+- good, which offers do you have?
+- yeah, what offers do you have?
+- yup, what have you got?
+- Sounds good. Can i have the availble positions?
+- Yes, Can i have the available offers?
+- Ok, Do you have any software engineer position?
+- Well, Do you have a commercial manager position?
+- yes, Do you have an accountant manager position?
+- for sure, what do you have?
+- ok, what do you have?
+
+## intent:affirm_search_job_general
+- Yes, I am looking for a devops position
+- Sure, I need a marketing management offer
+- ok. i need an telecommunication engineer job
+- well, do you have any administrative assistant position?
+- yeah, i am looking for a new job
+- yes, i would like to offer my services as an accountant
+- yes but i am an executive assistant
+- of course, but i would like a non technical offer
+- yes i just have got my diploma in financial engineering
+- sure if you have a business analyst position
+
 ## intent:deny
 - no
 - never
@@ -135,19 +167,6 @@
 - 3
 - 4
 - 5
-
-## intent:out_of_scope
-- i don't know
-- tell me
-- same as you
-- i am hungry
-- i am looking for a job
-- why
-- what
-- so what
-- guess
-- bla bla 
-
 
 ## intent:mood_great
 - perfect
