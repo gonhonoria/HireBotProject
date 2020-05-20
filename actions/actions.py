@@ -27,12 +27,12 @@ from sqlite3 import Error
 
 
 #load job data in dataframe and vector 
-data = pd.read_csv('../job_process.csv')
-path_file = os.path.join('..','vector.pkl')
+data = pd.read_csv('./job_process.csv')
+path_file = os.path.join('.','vector.pkl')
 with open(path_file,'rb') as f:
     vector = pickle.load(f)
   
-path_file = os.path.join('..','vectorizer.pkl')
+path_file = os.path.join('.','vectorizer.pkl')
 with open(path_file,'rb') as f:
     tfidf = pickle.load(f)
     
