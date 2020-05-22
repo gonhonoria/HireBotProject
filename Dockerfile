@@ -12,6 +12,7 @@ USER root
 
 # Install extra requirements for actions code, if necessary (uncomment next line)
 RUN pip install -r requirements-actions.txt
+RUN python -m spacy download en
 
 # Copy actions folder to working directory
 COPY ./actions /app/actions
