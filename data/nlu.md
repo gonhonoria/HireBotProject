@@ -79,6 +79,14 @@
 - [mila@gmail.com](mail)
 - [example@true.org](mail)
 - [apple@false.org](mail)
+- Nayla
+- [nay@gmail.com](mail)
+- gael@kodjo
+- gael
+- [Kil@gmail.com](mail)
+- Kilye
+- [nel@gmail.com](mail)
+- Antonella
 
 ## intent:user_profile
 - I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something to strive toward. I’m not comfortable with settling, and I’m always looking for an opportunity to do better and achieve greatness. In my previous role, I was promoted three times in less than two years.
@@ -120,6 +128,10 @@
 - My education has focused on not only learning the fundamentals, but also on the practical application of the information learned within those classes. For example, I played a lead role in a class project where we gathered and analyzed best practice data from this industry. Let me tell you more about the results.Focus on specific behavioral examples supporting the key competencies for the job. Then ask if they would like to hear more examples.
 - I worked at a small shop for two years doing 50 projects a year, meeting 100% of my deadlines. Then I worked for a bigger firm with clients like Disney and Netflix—with 99% client satisfaction. I collaborated with the team to win an A’ Design Award. I’m excited to step into a role like this that’s designed around that kind of efficiency and collaboration
 - I have worked as microwave engineer for huawei. prepare the radio frequency and make recommendations;- Make current \ntraffic and traffic increase analysis;also Conduct planned network \ncoverage analysis;  i Register the complaints and follow up;- Organize \nradio frequency usage licenses acquisition; Prepare and register the \nRadiation project according to sanitary norms and standards of RA
+- 've learned that we all have different communication styles, and I need \nto learn how others communicate for us to effectively work together and \nmeet each other in the middle. I also like to ask questions and don't \nhave a problem following up to confirm I've understood something \ncorrectly. We all see things through our own perspectives, and I try to \nunderstand what that perspective is for others so we can communicate \nwell
+- Enthusiastic software engineer with 4+ years experience participating in\n the complete product development lifecycle of successfully launched \napplications. Eager to join XYZ Inc. to deliver mission-critical \ntechnology and business solutions to Fortune 500 companies and some of \nthe most recognized brands on the planet. In previous roles, reduced \ndowntime by 15% and warranty costs by 25%; identified and resolved a \nprocess bottleneck that reduced coding efficiency by up to 30%.
+- I am an software engineer. with more than 9 years experience in programming, coding
+- I am a certified Public Accountant with 5+ years of experience of ledger \nprocesses, reconciliations and streamlining reports. Possess an MBA. \nSeeking to leverage my professional expertise and experience into a \nmanagerial role as a corporate bank
 
 ## intent:affirm_search_job_questions
 - Yes, Which positions are available?
