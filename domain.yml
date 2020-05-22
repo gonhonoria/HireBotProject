@@ -9,8 +9,6 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
-- search_job_general
-- search_job
 - inform
 - user_profile
 - thanks
@@ -19,7 +17,6 @@ intents:
 - affirm_search_job_general
 - affirm_search_job_questions
 entities:
-- location
 - job_title
 - name
 - age
