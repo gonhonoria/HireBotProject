@@ -27,9 +27,5 @@ models/<timestamp>.tar.giz: trained  models
 ## To test it locally
 pip install rasa
 rasa train
-rasa runactions & rasa shell
-
-You can also use Rasa X to test it: 
-http://35.195.169.83/login
-mot de passe: rasa
+rasa run actions & rasa shell
 
